@@ -170,7 +170,9 @@ public class User {
 ``` 
 
 ## Step 7
-Create class MyUserDetails. It will be like our converter from our class User to UserDetails.
+Create class MyUserDetails that implements interface UserDetails. Override all his methods.
+
+It will be like our converter from our class User to UserDetails.
 ```java
 @SuppressWarnings("unused")
 public class MyUserDetails implements UserDetails {
@@ -230,7 +232,9 @@ public class MyUserDetails implements UserDetails {
 ```
 
 ## Step 8
-Then create class MyUserDetailsService.
+Then create class MyUserDetailsService that implements interface UserDetailsService. Override a single method.
+
+This method allows to get a user from database by the username if he exists in the database.
 ```java
 @Service
 public class MyUserDetailsService implements UserDetailsService {
