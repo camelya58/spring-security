@@ -1,4 +1,4 @@
-### spring-security-jwt
+# spring-security-jwt
 Simple project with Spring Security using JWT.
 
 Stack: Spring Security, JWT.
