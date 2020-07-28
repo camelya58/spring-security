@@ -3,7 +3,6 @@ package com.github.camelya58.springsecurityjwt.config;
 import com.github.camelya58.springsecurityjwt.service.MyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -19,7 +18,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
  * @author Kamila Meshcheryakova
  * created 27.07.2020
  */
-@Configuration
+@EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Bean

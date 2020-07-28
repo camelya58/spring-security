@@ -6,9 +6,10 @@ package com.github.camelya58.springsecurityjwt.models;
  * @author Kamila Meshcheryakova
  * created 28.07.2020
  */
+@SuppressWarnings("unused")
 public class AuthenticationResponse {
 
-    private String token;
+    private final String token;
 
     public AuthenticationResponse(String token) {
         this.token = token;

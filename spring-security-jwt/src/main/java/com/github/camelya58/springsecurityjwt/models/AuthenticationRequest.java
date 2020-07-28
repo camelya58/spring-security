@@ -6,6 +6,7 @@ package com.github.camelya58.springsecurityjwt.models;
  * @author Kamila Meshcheryakova
  * created 28.07.2020
  */
+@SuppressWarnings("unused")
 public class AuthenticationRequest {
 
     private String username;
