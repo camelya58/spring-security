@@ -386,6 +386,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
     @Autowired
     private JwtUtil jwtTokenUtil;
+
     @Override
     protected void doFilterInternal(HttpServletRequest request,
                                     HttpServletResponse response,
@@ -441,3 +442,5 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 ## Step 16
 Run the project at http://localhost:8080/ and repeat step 13.
+
+The test project is ready. For work with project you need add repository and change NyUserDetailsService class. 
