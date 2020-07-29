@@ -328,7 +328,7 @@ public class MyUserDetailsService implements UserDetailsService {
 ```
 
 ## Step 13
-Run the project by url: http://localhost:8080/
+Run the project at http://localhost:8080/
 ![Image alt](https://i.ibb.co/7tChRYz/swagger.png)
 
 Enter user name and password.
@@ -438,3 +438,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 }
 ```
+
+## Step 16
+Run the project at http://localhost:8080/ and repeat step 13.
