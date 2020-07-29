@@ -109,7 +109,7 @@ public class JwtUtil {
      * @param userDetails the information about user
      * @return true or false
      */
-    private Boolean validateToken(String token, UserDetails userDetails) {
+    public Boolean validateToken(String token, UserDetails userDetails) {
         final String username = extractUsername(token);
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }

@@ -36,7 +36,7 @@ public class HomeResource {
     private JwtUtil jwtTokenUtil;
 
     @ApiOperation(value = "Say Hello", authorizations = {@Authorization(value = "JWT")})
-    @RequestMapping({"/hello"})
+    @GetMapping(value = "/hello")
     public String hello() {
         return "Hello World!";
     }

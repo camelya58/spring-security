@@ -25,11 +25,21 @@ import java.util.Collections;
 @EnableSwagger2
 public class SwaggerConfiguration implements WebMvcConfigurer {
 
+    /**
+     * Redirects users from home page to the Swagger UI page.
+     *
+     * @param registry assists with the registration of simple automated controllers pre-configured
+     */
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addRedirectViewController("/", "/swagger-ui.html");
     }
 
+    /**
+     * This method creates a customised Docket bean.
+     *
+     * @return instance of the implementation of the interface Docket
+     */
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
@@ -42,13 +52,22 @@ public class SwaggerConfiguration implements WebMvcConfigurer {
                 .useDefaultResponseMessages(true);
     }
 
-    /* Describe APIs */
+    /**
+     * This method sets up tittle and description for swagger.
+     *
+     * @return page swagger-ui.html with custom fields
+     */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("Authentication")
                 .description("Example of spring security with JWT")
                 .build();
     }
+    /**
+     * This method allows to add authorize button to swagger configuration.
+     *
+     * @return apiKey with given parameters
+     */
     private ApiKey apiKey() {
         return new ApiKey("JWT", "Authorization", "header");
     }
