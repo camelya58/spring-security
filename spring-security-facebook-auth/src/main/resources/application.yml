@@ -1,0 +1,25 @@
+#security:
+#    oauth2:
+#      client:
+#        clientId: 3441171259268073
+#        clientSecret: ee258689435340f6b2907d16d47d6bdb
+#        access-token-uri: https://graph.facebook.com/oauth/access_token
+#        user-authorization-uri: https://www.facebook.com/dialog/oauth
+#        token-name: oauth_token
+#        authentication-scheme: query
+#        client-authentication-scheme: form
+#      resource:
+#        user-info-uri: https://graph.facebook.com/me
+________________________________________________________
+security:
+  oauth2:
+    client:
+      clientId:
+      clientSecret:
+      access-token-uri: https://github.com/login/oauth/access_token
+      user-authorization-uri: https://github.com/login/oauth/authorize
+      token-name: oauth_token
+      authentication-scheme: query
+      client-authentication-scheme: form
+    resource:
+      user-info-uri: https://api.github.com/user
