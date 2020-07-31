@@ -1,4 +1,4 @@
-# jwt
+# jwt-auth-server
 Simple project with Spring Security using JWT.
 
 Stack: Spring Security, JWT, Oath2.
