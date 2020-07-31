@@ -115,6 +115,12 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 ```
 
 ## Step 5
+Add properties.
+```properties
+security.token.secret-key=*************
+```
+
+## Step 6
 Run the project at http://localhost:8080/oauth/token?scope=write&grant_type=password&username=user&password=12345.
 
 Use Postman.
