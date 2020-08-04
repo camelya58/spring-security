@@ -4,7 +4,7 @@ This repository contains several mini-projects with Spring Security and other re
 
 ## What Spring Security is:
 - user authentication by user name and password;
-- authentication systems SSO/OKTA/LDAP;
+- authentication providers SSO/OKTA/LDAP;
 - application level authorization;
 - authorization inside the application,ex. Oauth2;
 - security of microservices (token, JWT);
