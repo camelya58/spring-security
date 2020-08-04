@@ -1,4 +1,4 @@
-# spring-security-oauth
+# spring-security-facebook-oauth
 Simple project with Spring Security using Oauth2.
 
 Stack: Spring Security, Oauth2.
