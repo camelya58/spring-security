@@ -35,13 +35,12 @@ He has the method "authenticate()".
 As well as you can use **AuthenticationManagerBuilder** using the method "configure(...)" of class WebSecurityConfigurerAdapter.
 He can checks in memory, using jdbc (datasource) or jpa does such user exist.
 
-For using jpa you will need to create a custom **UserDetailsService**. It will allow to load user by username from database. You also will need to create custom **UserDetails**
+For using jpa you will need to create a custom **UserDetailsService**. It will allow to load user by username from database. You also will need to create custom **UserDetails**.
 
-**AuthenticationProvider**
-He has the method "authenticate()" which allows to check in own database does such user exist and 
+**AuthenticationProvider** has the method "authenticate()" which allows to check in own database does such user exist and 
 provides access to the token.
 
-Facebook, Google, Github can be AuthenticationProvider or you can create uour custome provider.
+Facebook, Google, Github can be AuthenticationProvider or you can create your custom provider.
 
 ### Authorization
 "Can this user do it?"
@@ -108,3 +107,21 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NSIsIm5hbWUiOiJLYW1pbGEiLCJ
 JWT:
 - doesn't contain confidentional information like password, ect.;
 - contain such information which allows to authenticate the user.
+
+# Authorization between services
+
+## 5 basic concepts:
+- Resource;
+- Resource owner;
+- Resource Server;
+- Client;
+- Authorization server.
+
+The authorization process:
+- Register a Client in a custom Authorization server or in Authentication provider like OKTA, Github, ect.
+- The Client will request an access token from Authorization server.
+- The Client will try to access the resource by providing an access token (JWT) to Resource server.
+- The Resource server must check the token.
+- The Resource server provides access the Client to the resource, knowing that the Client has such authorities.
+
+If you need to make authorization between own microservices use **OAuth2.0**.
