@@ -43,7 +43,11 @@ He has the method "authenticate()".
 As well as you can use **AuthenticationManagerBuilder** using the method "configure(...)" of class WebSecurityConfigurerAdapter.
 He can checks in memory, using jdbc (datasource) or jpa does such user exist.
 
+Jdbc allows using tables of SQL databases from ready-made schema without creation java classes and connecting them with our application. 
+
 ***You can see the jdbc authentication by datasource in a project - [spring-security-jdbc](https://github.com/camelya58/spring-security/tree/master/spring-security-jdbc).***
+
+However, it isn't necessary always to create an sql schema, you can create Java objects and convert them to database entities using jpa.
 
 For using jpa you will need to create a custom **UserDetailsService**. It will allow to load user by username from database. You also will need to create custom **UserDetails**.
 
