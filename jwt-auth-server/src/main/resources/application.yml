@@ -1,0 +1,16 @@
+security:
+  token:
+    secret-key: "secret"
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/account-develop
+    username: root
+    password: root
+    driverClassName: org.postgresql.Driver
+    platform: postgres
+    initialization-mode: always
+  # JPA config
+  jpa:
+    database: POSTGRESQL
+    hibernate.ddl-auto: validate
